@@ -69,7 +69,7 @@ vmod_hello(VRT_CTX, VCL_STRING name)
 	char *p;
 	unsigned u, v;
 
-	u = WS_Reserve(ctx->ws, 0); /* Reserve some work space */
+	u = WS_ReserveSize(ctx->ws, 0); /* Reserve some work space */
 	p = ctx->ws->f;		/* Front of workspace area */
 	v = snprintf(p, u, "Hello, %s", name);
 	v++;
